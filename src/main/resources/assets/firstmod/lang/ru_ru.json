@@ -3,6 +3,10 @@
   "item.firstmod.titanium_nugget": "Кусочек титана",
   "item.firstmod.raw_titanium": "Рудный титан",
 
+  "item.firstmod.tomato": "Помидор",
+
   "block.firstmod.titanium_block": "Титановый блок",
-  "block.firstmod.titanium_ore": "Титановая руда"
+  "block.firstmod.titanium_ore": "Титановая руда",
+
+  "itemGroup.firstModeTab": "Вкладка Святослава Святкина"
 }

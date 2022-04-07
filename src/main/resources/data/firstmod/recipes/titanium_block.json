@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "firstmod:titanium_ingot"
+    }
+  },
+  "result": {
+    "item": "firstmod:titanium_block",
+    "count": 1
+  }
+}
