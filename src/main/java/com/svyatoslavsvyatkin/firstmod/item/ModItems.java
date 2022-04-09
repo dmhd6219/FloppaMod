@@ -1,6 +1,7 @@
 package com.svyatoslavsvyatkin.firstmod.item;
 
 import com.svyatoslavsvyatkin.firstmod.FirstMod;
+import com.svyatoslavsvyatkin.firstmod.item.custom.SmartBlowtorchItem;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
@@ -25,6 +26,12 @@ public class ModItems {
 
     public static final RegistryObject<Item> TOMATO = ITEMS.register("tomato",
             ( () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FIRSTMODE_TAB).food(new FoodProperties.Builder().nutrition(2).saturationMod(0.2f).build()))));
+
+    public static final RegistryObject<Item> SMART_BLOW_TORCH = ITEMS.register("smart_blow_torch",
+            ( () -> new SmartBlowtorchItem(new Item.Properties().tab(ModCreativeModeTab.FIRSTMODE_TAB).durability(64))));
+
+
+
 
     public static void register(IEventBus eventBus){
         ITEMS.register(eventBus);

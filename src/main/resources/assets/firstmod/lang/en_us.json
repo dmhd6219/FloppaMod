@@ -2,11 +2,14 @@
   "item.firstmod.titanium_ingot": "Titanium Ingot",
   "item.firstmod.titanium_nugget": "Titanium Nugget",
   "item.firstmod.raw_titanium": "Raw Titanium",
+  "item.firstmod.smart_blow_torch": "Smart Blow Torch",
 
   "item.firstmod.tomato": "Tomato",
 
   "block.firstmod.titanium_block": "Titanium Block",
   "block.firstmod.titanium_ore": "Titanium Ore",
+
+
 
   "itemGroup.firstModeTab": "Svyatoslav Svyatkin Tab"
 }
