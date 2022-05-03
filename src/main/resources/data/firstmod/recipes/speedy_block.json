@@ -7,11 +7,11 @@
   ],
   "key": {
     "#": {
-      "item": "firstmod:titanium_ingot"
+      "item": "firstmod:titanium_block"
     }
   },
   "result": {
-    "item": "firstmod:titanium_block",
+    "item": "firstmod:speedy_block",
     "count": 1
   }
 }

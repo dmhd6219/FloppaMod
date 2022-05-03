@@ -2,6 +2,10 @@
   "replace": false,
   "values": [
     "firstmod:titanium_ore",
-    "firstmod:titanium_block"
+    "firstmod:titanium_block",
+    "firstmod:titanium_stairs",
+    "firstmod:titanium_slab",
+    "firstmod:titanium_fence",
+    "firstmod:titanium_wall"
   ]
 }

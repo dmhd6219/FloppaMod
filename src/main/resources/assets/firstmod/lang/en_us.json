@@ -3,13 +3,39 @@
   "item.firstmod.titanium_nugget": "Titanium Nugget",
   "item.firstmod.raw_titanium": "Raw Titanium",
   "item.firstmod.smart_blow_torch": "Smart Blow Torch",
+  "item.firstmod.coal_coke": "Coal Coke",
 
   "item.firstmod.tomato": "Tomato",
 
+  "item.firstmod.titanium_sword": "Titanium Sword",
+  "item.firstmod.titanium_shovel": "Titanium Shovel",
+  "item.firstmod.titanium_axe": "Titanium Axe",
+  "item.firstmod.titanium_pickaxe": "Titanium Pickaxe",
+  "item.firstmod.titanium_hoe": "Titanium Hoe",
+
+
   "block.firstmod.titanium_block": "Titanium Block",
   "block.firstmod.titanium_ore": "Titanium Ore",
+  "block.firstmod.speedy_block": "Speedy Block",
+
+  "block.firstmod.titanium_stairs": "Titanium Stairs",
+  "block.firstmod.titanium_fence": "Titanium Fence",
+  "block.firstmod.titanium_fence_gate": "Titanium Fence Gate",
+  "block.firstmod.titanium_slab": "Titanium Slab",
+  "block.firstmod.titanium_wall": "Titanium Wall",
 
 
 
-  "itemGroup.firstModeTab": "Svyatoslav Svyatkin Tab"
+
+  "itemGroup.first_mode_tab": "Svyatoslav Svyatkin Tab",
+
+  "tooltip.firstmod.blowtorch": "Hold §eShift§r for more information",
+  "tooltip.firstmod.blowtorch_shift": "Click a Block and see if you can blow torch it into a different Item!",
+
+  "tooltip.block.firstmod.titanium_block": "A hardened metal block, almost impossible to break",
+  "tooltip.block.firstmod.titanium_ore": "A hardened metal ore, almost impossible to break",
+  "tooltip.block.firstmod.speedy_block": "Step it and see what happens",
+
+  "entity.firstmod.example_entity": "wtf",
+  "entity.firstmod.floppa_entity": "Big Floppa"
 }

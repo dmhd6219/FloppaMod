@@ -1,6 +1,7 @@
 package com.svyatoslavsvyatkin.firstmod;
 
 import com.svyatoslavsvyatkin.firstmod.block.ModBlocks;
+import com.svyatoslavsvyatkin.firstmod.entity.custom.ModEntityTypes;
 import com.svyatoslavsvyatkin.firstmod.item.ModItems;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
@@ -33,6 +34,7 @@ public class FirstMod {
 
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
+        ModEntityTypes.ENTITY_TYPES.register(modEventBus);
 
         modEventBus.addListener(this::setup);
 

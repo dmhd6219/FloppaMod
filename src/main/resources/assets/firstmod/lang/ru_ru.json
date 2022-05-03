@@ -3,11 +3,35 @@
   "item.firstmod.titanium_nugget": "Кусочек титана",
   "item.firstmod.raw_titanium": "Рудный титан",
   "item.firstmod.smart_blow_torch": "Волшебная палочка",
+  "item.firstmod.coal_coke": "Совиный уголь",
 
   "item.firstmod.tomato": "Помидор",
 
+  "item.firstmod.titanium_sword": "Титанвоый меч",
+  "item.firstmod.titanium_shovel": "Титановая лопата",
+  "item.firstmod.titanium_axe": "Титановый топор",
+  "item.firstmod.titanium_pickaxe": "Титановая кирка",
+  "item.firstmod.titanium_hoe": "Титановая мотыга",
+
   "block.firstmod.titanium_block": "Титановый блок",
   "block.firstmod.titanium_ore": "Титановая руда",
+  "block.firstmod.speedy_block": "Домой из школы",
 
-  "itemGroup.firstModeTab": "Вкладка Святослава Святкина"
+  "block.firstmod.titanium_stairs": "Титановые ступеньки",
+  "block.firstmod.titanium_fence": "Титановый забор",
+  "block.firstmod.titanium_fence_gate": "Титановая калитка",
+  "block.firstmod.titanium_slab": "Титановый полублок",
+  "block.firstmod.titanium_wall": "Титановая стена",
+
+  "itemGroup.first_mode_tab": "Вкладка Святослава Святкина",
+
+  "tooltip.firstmod.blowtorch": "Удерживайте §eShift§r для того, чтобы получить больше информации",
+  "tooltip.firstmod.blowtorch_shift": "Волшебная палочка ёпта",
+
+  "tooltip.block.firstmod.titanium_block": "То же железо, только крепче",
+  "tooltip.block.firstmod.titanium_ore": "Та же железная руда, только крепче",
+  "tooltip.block.firstmod.speedy_block": "Наступи и посмотри, что произойдёт",
+
+  "entity.firstmod.example_entity": "wtf",
+  "entity.firstmod.floppa_entity": "Большой Русский кот"
 }
