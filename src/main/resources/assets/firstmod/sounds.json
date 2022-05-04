@@ -1,0 +1,20 @@
+{
+  "entity.floppa_entity.ambient": {
+    "sounds": [
+      "firstmod:anec1",
+      "firstmod:dumplings"
+    ]
+  },
+
+  "entity.floppa_entity.hurt": {
+    "sounds": [
+      "firstmod:sht"
+    ]
+  },
+
+  "entity.floppa_entity.death": {
+    "sounds": [
+      "firstmod:floppa_entity_death"
+    ]
+  }
+}

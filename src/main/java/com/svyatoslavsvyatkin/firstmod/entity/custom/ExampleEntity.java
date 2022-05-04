@@ -1,7 +1,16 @@
 package com.svyatoslavsvyatkin.firstmod.entity.custom;
 
 import com.svyatoslavsvyatkin.firstmod.item.ModItems;
+import com.svyatoslavsvyatkin.firstmod.sound.ModSounds;
+import net.minecraft.Util;
+import net.minecraft.network.chat.TextComponent;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.sounds.SoundEvent;
+import net.minecraft.sounds.SoundEvents;
+import net.minecraft.sounds.SoundSource;
+import net.minecraft.world.InteractionHand;
+import net.minecraft.world.InteractionResult;
+import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.AgeableMob;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.Mob;
@@ -13,6 +22,7 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.Level;
+import net.minecraftforge.fml.common.Mod;
 
 
 public class ExampleEntity extends Animal {
@@ -43,4 +53,10 @@ public class ExampleEntity extends Animal {
     public AgeableMob getBreedOffspring(ServerLevel level, AgeableMob parent) {
         return ModEntityTypes.EXAMPLE_ENTITY.get().create(level);
     }
+
+    protected SoundEvent getHurtSound(DamageSource pDamageSource) {
+        return ModSounds.FLOPPA_ENTITY_HURT.get();
+    }
+
+
 }

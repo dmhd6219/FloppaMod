@@ -1,6 +1,7 @@
 package com.svyatoslavsvyatkin.firstmod.entity.custom;
 
 import com.svyatoslavsvyatkin.firstmod.item.ModItems;
+import com.svyatoslavsvyatkin.firstmod.sound.ModSounds;
 import net.minecraft.Util;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.TextComponent;
@@ -30,7 +31,7 @@ public class FloppaEntity extends Animal {
     public FloppaEntity(EntityType<? extends Animal> entityType,Level level) {
         super(entityType,level);
     }
-    private static final Ingredient FOOD_ITEMS = Ingredient.of(ModItems.DUMPLING.get());
+    private static final Ingredient FOOD_ITEMS = Ingredient.of(ModItems.TITANIUM_INGOT.get());
 
     @Override
     protected void registerGoals() {
@@ -70,12 +71,19 @@ public class FloppaEntity extends Animal {
         return SoundEvents.CAT_DEATH;
     }
 
+
     @Override
     public InteractionResult mobInteract(Player pPlayer, InteractionHand pHand) {
         Level pLevel = pPlayer.level;
         if (!pLevel.isClientSide()){
             if (pHand == InteractionHand.MAIN_HAND){
                 pPlayer.sendMessage(new TextComponent("Right clicked"), Util.NIL_UUID);
+
+                if (pPlayer.getMainHandItem().getItem() == ModItems.DUMPLING.get()){
+                    this.playSound(ModSounds.FLOPPA_ENTITY_AMBIENT.get(), 1f, 1f);
+                }
+
+
             }
         }
 
