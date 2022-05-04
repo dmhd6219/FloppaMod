@@ -1,19 +1,22 @@
 package com.svyatoslavsvyatkin.firstmod.entity.model;
 
+import com.google.common.collect.ImmutableList;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
 import com.svyatoslavsvyatkin.firstmod.FirstMod;
 import com.svyatoslavsvyatkin.firstmod.entity.custom.FloppaEntity;
+import net.minecraft.client.model.AgeableListModel;
 import net.minecraft.client.model.EntityModel;
 import net.minecraft.client.model.geom.ModelLayerLocation;
 import net.minecraft.client.model.geom.ModelPart;
 import net.minecraft.client.model.geom.PartPose;
 import net.minecraft.client.model.geom.builders.*;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.util.Mth;
 import net.minecraft.world.entity.Entity;
 
 
-public class FloppaEntityModel<Type extends FloppaEntity> extends EntityModel<Type> {
+public class FloppaEntityModel<Type extends FloppaEntity> extends AgeableListModel<Type> {
     // This layer location should be baked with EntityRendererProvider.Context in the entity renderer and passed into this model's constructor
     public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(new ResourceLocation(FirstMod.MOD_ID, "floppa_entity"), "main");
     private final ModelPart back_left_leg;
@@ -81,10 +84,6 @@ public class FloppaEntityModel<Type extends FloppaEntity> extends EntityModel<Ty
         return LayerDefinition.create(meshdefinition, 64, 64);
     }
 
-    @Override
-    public void setupAnim(Type entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
-
-    }
 
     @Override
     public void renderToBuffer(PoseStack poseStack, VertexConsumer buffer, int packedLight, int packedOverlay, float red, float green, float blue, float alpha) {
@@ -97,5 +96,25 @@ public class FloppaEntityModel<Type extends FloppaEntity> extends EntityModel<Ty
         this.left_ear.render(poseStack, buffer, packedLight, packedOverlay);
         this.head.render(poseStack, buffer, packedLight, packedOverlay);
         this.tail.render(poseStack, buffer, packedLight, packedOverlay);
+    }
+
+    @Override
+    protected Iterable<ModelPart> headParts() {
+        return ImmutableList.of(this.head);
+    }
+
+    @Override
+    protected Iterable<ModelPart> bodyParts() {
+        return ImmutableList.of(this.body, this.back_right_leg, this.back_left_leg, this.front_right_leg, this.front_left_leg);
+    }
+
+    @Override
+    public void setupAnim(Type pEntity, float pLimbSwing, float pLimbSwingAmount, float pAgeInTicks, float pNetHeadYaw, float pHeadPitch) {
+        this.head.xRot = pHeadPitch * ((float) Math.PI / 180F);
+        this.head.yRot = pNetHeadYaw * ((float) Math.PI / 180F);
+        this.back_right_leg.xRot = Mth.cos(pLimbSwing * 0.6662F) * 1.4F * pLimbSwingAmount;
+        this.back_left_leg.xRot = Mth.cos(pLimbSwing * 0.6662F + (float) Math.PI) * 1.4F * pLimbSwingAmount;
+        this.front_right_leg.xRot = Mth.cos(pLimbSwing * 0.6662F + (float) Math.PI) * 1.4F * pLimbSwingAmount;
+        this.front_left_leg.xRot = Mth.cos(pLimbSwing * 0.6662F) * 1.4F * pLimbSwingAmount;
     }
 }

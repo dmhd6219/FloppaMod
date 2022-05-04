@@ -18,7 +18,7 @@ public class ModEntityTypes {
                     .build(new ResourceLocation(FirstMod.MOD_ID, "example_entity").toString()));
 
     public static final RegistryObject<EntityType<FloppaEntity>> FLOPPA_ENTITY = ENTITY_TYPES.register("floppa_entity",
-            () -> EntityType.Builder.of(FloppaEntity::new,MobCategory.CREATURE).sized(2f, 2f)
+            () -> EntityType.Builder.of(FloppaEntity::new,MobCategory.CREATURE).sized(0.9F, 0.9F)
                     .build(new ResourceLocation(FirstMod.MOD_ID, "floppa_entity").toString()));
 
 }

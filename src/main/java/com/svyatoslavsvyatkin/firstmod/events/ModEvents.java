@@ -15,9 +15,9 @@ import net.minecraftforge.server.command.ConfigCommand;
 public class ModEvents {
 
     @SubscribeEvent
-    public static void registerAttributes(EntityAttributeCreationEvent event){
+    public static void registerAttributes(EntityAttributeCreationEvent event) {
         event.put(ModEntityTypes.EXAMPLE_ENTITY.get(), ExampleEntity.createAttributes().build());
-           event.put(ModEntityTypes.FLOPPA_ENTITY.get(), FloppaEntity.createAttributes().build());
+        event.put(ModEntityTypes.FLOPPA_ENTITY.get(), FloppaEntity.createAttributes().build());
 
     }
 

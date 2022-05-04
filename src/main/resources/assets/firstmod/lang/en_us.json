@@ -6,6 +6,12 @@
   "item.firstmod.coal_coke": "Coal Coke",
 
   "item.firstmod.tomato": "Tomato",
+  "item.firstmod.dumpling": "Dumpling",
+
+
+  "item.firstmod.dumpling_seeds": "Dumpling Seeds",
+  "item.firstmod.dumpling_plant": "Dumpling Plant",
+
 
   "item.firstmod.titanium_sword": "Titanium Sword",
   "item.firstmod.titanium_shovel": "Titanium Shovel",
@@ -37,5 +43,6 @@
   "tooltip.block.firstmod.speedy_block": "Step it and see what happens",
 
   "entity.firstmod.example_entity": "wtf",
-  "entity.firstmod.floppa_entity": "Big Floppa"
+  "entity.firstmod.floppa_entity": "Big Floppa",
+  "item.firstmod.floppa_spawn_egg": "Floppa spawn egg"
 }

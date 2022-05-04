@@ -1,6 +1,7 @@
 package com.svyatoslavsvyatkin.firstmod.block;
 
 import com.svyatoslavsvyatkin.firstmod.FirstMod;
+import com.svyatoslavsvyatkin.firstmod.block.custom.DumplingPlantBlock;
 import com.svyatoslavsvyatkin.firstmod.block.custom.SpeedyBlock;
 import com.svyatoslavsvyatkin.firstmod.item.ModCreativeModeTab;
 import com.svyatoslavsvyatkin.firstmod.item.ModItems;
@@ -48,6 +49,13 @@ public class ModBlocks {
     public static final RegistryObject<Block> TITANIUM_SLAB = registerBlock("titanium_slab",
             () -> new SlabBlock(
                     BlockBehaviour.Properties.of(Material.METAL).strength(5f).requiresCorrectToolForDrops()));
+
+
+    public static final RegistryObject<Block> DUMPLING_PLANT = BLOCKS.register("dumpling_plant",
+            ()-> new DumplingPlantBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT)));
+
+
+
 
     // объявление блока с кастомной вкладкой и подписью
     private static <T extends Block>RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab,  String tooltipKey) {

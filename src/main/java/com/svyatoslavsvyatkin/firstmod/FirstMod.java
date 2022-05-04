@@ -3,6 +3,8 @@ package com.svyatoslavsvyatkin.firstmod;
 import com.svyatoslavsvyatkin.firstmod.block.ModBlocks;
 import com.svyatoslavsvyatkin.firstmod.entity.custom.ModEntityTypes;
 import com.svyatoslavsvyatkin.firstmod.item.ModItems;
+import net.minecraft.client.renderer.ItemBlockRenderTypes;
+import net.minecraft.client.renderer.RenderType;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.MinecraftForge;
@@ -11,6 +13,7 @@ import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.InterModComms;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.InterModEnqueueEvent;
 import net.minecraftforge.fml.event.lifecycle.InterModProcessEvent;
@@ -37,9 +40,14 @@ public class FirstMod {
         ModEntityTypes.ENTITY_TYPES.register(modEventBus);
 
         modEventBus.addListener(this::setup);
+        modEventBus.addListener(this::setupClient);
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
+    }
+
+    private void setupClient(final FMLClientSetupEvent event){
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.DUMPLING_PLANT.get(), RenderType.cutout());
     }
 
     private void setup(final FMLCommonSetupEvent event) {

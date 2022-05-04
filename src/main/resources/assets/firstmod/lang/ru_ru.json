@@ -6,6 +6,11 @@
   "item.firstmod.coal_coke": "Совиный уголь",
 
   "item.firstmod.tomato": "Помидор",
+  "item.firstmod.dumpling": "Пельмень",
+
+
+  "item.firstmod.dumpling_seeds": "Семена пельменя",
+  "item.firstmod.dumpling_plant": "Росток пельменя",
 
   "item.firstmod.titanium_sword": "Титанвоый меч",
   "item.firstmod.titanium_shovel": "Титановая лопата",
@@ -33,5 +38,6 @@
   "tooltip.block.firstmod.speedy_block": "Наступи и посмотри, что произойдёт",
 
   "entity.firstmod.example_entity": "wtf",
-  "entity.firstmod.floppa_entity": "Большой Русский кот"
+  "entity.firstmod.floppa_entity": "Большой Русский кот",
+  "item.firstmod.floppa_spawn_egg": "Яйцо призыва Шлёпы"
 }
