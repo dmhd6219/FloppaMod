@@ -1,10 +1,14 @@
 package com.svyatoslavsvyatkin.firstmod.entity.custom;
 
 import com.svyatoslavsvyatkin.firstmod.item.ModItems;
+import net.minecraft.Util;
 import net.minecraft.core.BlockPos;
+import net.minecraft.network.chat.TextComponent;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
+import net.minecraft.world.InteractionHand;
+import net.minecraft.world.InteractionResult;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.AgeableMob;
 import net.minecraft.world.entity.EntityType;
@@ -24,7 +28,7 @@ import net.minecraft.world.level.block.state.BlockState;
 
 public class FloppaEntity extends Animal {
     public FloppaEntity(EntityType<? extends Animal> entityType,Level level) {
-       super(entityType,level);
+        super(entityType,level);
     }
     private static final Ingredient FOOD_ITEMS = Ingredient.of(ModItems.DUMPLING.get());
 
@@ -66,4 +70,15 @@ public class FloppaEntity extends Animal {
         return SoundEvents.CAT_DEATH;
     }
 
+    @Override
+    public InteractionResult mobInteract(Player pPlayer, InteractionHand pHand) {
+        Level pLevel = pPlayer.level;
+        if (!pLevel.isClientSide()){
+            if (pHand == InteractionHand.MAIN_HAND){
+                pPlayer.sendMessage(new TextComponent("Right clicked"), Util.NIL_UUID);
+            }
+        }
+
+        return super.mobInteract(pPlayer, pHand);
+    }
 }
