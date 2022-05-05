@@ -55,7 +55,7 @@ public class ExampleEntity extends Animal {
     }
 
     protected SoundEvent getHurtSound(DamageSource pDamageSource) {
-        return ModSounds.FLOPPA_ENTITY_HURT.get();
+        return ModSounds.SHT.get();
     }
 
 

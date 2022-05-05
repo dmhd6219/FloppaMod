@@ -80,7 +80,7 @@ public class FloppaEntity extends Animal {
                 pPlayer.sendMessage(new TextComponent("Right clicked"), Util.NIL_UUID);
 
                 if (pPlayer.getMainHandItem().getItem() == ModItems.DUMPLING.get()){
-                    this.playSound(ModSounds.FLOPPA_ENTITY_AMBIENT.get(), 1f, 1f);
+                    this.playSound(ModSounds.ANECDOT1.get(), 1f, 1f);
                 }
 
 
