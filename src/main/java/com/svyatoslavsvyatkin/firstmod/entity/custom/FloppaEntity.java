@@ -81,6 +81,9 @@ public class FloppaEntity extends Animal {
 
                 if (pPlayer.getMainHandItem().getItem() == ModItems.DUMPLING.get()){
                     this.playSound(ModSounds.ANECDOT1.get(), 1f, 1f);
+
+                    pPlayer.getMainHandItem().shrink(1);
+                    pPlayer.sendMessage(new TextComponent("Floppa ate your dumpling"), Util.NIL_UUID);
                 }
 
 
