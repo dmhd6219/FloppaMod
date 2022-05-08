@@ -7,6 +7,7 @@ import com.svyatoslavsvyatkin.firstmod.sound.ModSounds;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.sounds.SoundEvents;
+import net.minecraft.world.InteractionResult;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.MinecraftForge;
@@ -35,6 +36,7 @@ public class FirstMod {
 
     public FirstMod() {
         // Register the setup method for modloading
+
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
         ModSounds.SOUNDS.register(modEventBus);

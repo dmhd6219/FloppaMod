@@ -32,6 +32,7 @@ public class SpeedyBlock extends Block {
         return super.use(pState, pLevel, pPos, pPlayer, pHand, pHit);
     }
 
+
     @Override
     public void stepOn(Level pLevel, BlockPos pPos, BlockState pState, Entity pEntity) {
         if (!pLevel.isClientSide()){

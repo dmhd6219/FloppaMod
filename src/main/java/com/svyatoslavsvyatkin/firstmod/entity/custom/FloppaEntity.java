@@ -25,6 +25,7 @@ import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraftforge.event.entity.living.LivingDeathEvent;
 
 
 public class FloppaEntity extends Animal {
@@ -77,13 +78,13 @@ public class FloppaEntity extends Animal {
         Level pLevel = pPlayer.level;
         if (!pLevel.isClientSide()){
             if (pHand == InteractionHand.MAIN_HAND){
-                pPlayer.sendMessage(new TextComponent("Right clicked"), Util.NIL_UUID);
+                pPlayer.sendMessage(new TextComponent("Floppa: MEOWWWWW"), Util.NIL_UUID);
 
                 if (pPlayer.getMainHandItem().getItem() == ModItems.DUMPLING.get()){
                     this.playSound(ModSounds.ANECDOT1.get(), 1f, 1f);
 
                     pPlayer.getMainHandItem().shrink(1);
-                    pPlayer.sendMessage(new TextComponent("Floppa ate your dumpling"), Util.NIL_UUID);
+                    pPlayer.sendMessage(new TextComponent("Floppa eat your dumpling"), Util.NIL_UUID);
                 }
 
 
@@ -92,4 +93,5 @@ public class FloppaEntity extends Animal {
 
         return super.mobInteract(pPlayer, pHand);
     }
+
 }
